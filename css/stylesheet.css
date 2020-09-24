@@ -47,6 +47,8 @@
 	text-transform: uppercase;
 	mix-blend-mode: screen;
 	color: transparent;
+	text-shadow: wheat -3px -1px 0px; /* må legge til stroke/animation på en eller annen måte uten å bruke webkit */
+	
 	/* animation-iteration-count: infinite;
 	animation-delay: 7.9s;
 	animation-duration: 1.4s; */
@@ -56,16 +58,14 @@
 	padding-bottom: 300px;
 }
 
-p {
-	/* animation-delay: 7.7s;
-	animation-fill-mode: forwards; */
-}
+/* p {
+	animation-delay: 7.7s;
+	animation-fill-mode: forwards;
+} */
 
-/* h1 {
-	-webkit-text-stroke: 1px red;
-	color: white;
-	text-shadow: 3px 3px 0 transparent -3px -1px 0 white, 1px -1px 0 white,
-		-1px 1px 0 white, 1px 1px 0 white;
+/* .dp_slider_title {
+	-webkit-text-stroke: 1px red  webkit ikke tillat?
+	
 } */
 audio {
 	width: 20px;
