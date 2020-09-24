@@ -1,0 +1,39 @@
+Deadpool - svart, rød, noe hvitt
+
+Finne ut hvordan ha responsive nettsider // kun desctop
+
+Consistant capitalization LongVar == 0; eller bruke _ // small
+
+Always name classes, ids ect  // no x = or y =
+
+    •	Side 1: Forsiden fungerer som en introside til løsningen med en lenke (<a>)  som ser ut som en 
+        knapp som lenker til side 2. Knappen kan for eksempel ha teksten «Start» e.l.
+        Knappen kan gjerne ha en tilpasset animasjon eller annen spennende effekt. Slå deg løs 🥳
+    
+    •	Side 2: Hovedside med interaktivitet (:hover/:target) og animasjoner. 
+    
+    •	Bruk korrekt posisjonering for å plassere de ulike elementene i containeren. (Absolute, realtive osv)
+    
+    •	Bruk forståelige klasser og id’er. 
+    
+    •	Bruk HTML og CSS kommentarer som gjør det enkelt å lese og forstå koden din.
+    
+    •	Skriv ryddig og ren kode som følger kodestandarden dere har blitt enig om.
+    
+    •	Bruk semantisk korrekt kode. Ta i bruk paragrafer, overskrifter og bilder på begge sidene. 
+        Du kan også bruke lyd, men det er valgfritt. 
+    
+    •	Bruk background-color, color, font-size og andre CSS egenskaper for å designe løsningen.
+    
+    •	Benytt deg av psudoklasser.
+    
+    •	Bruk transition og animasjon. (Fade in effekt, fargeforandring eller bevegelse)
+    
+    •	Bruk transform. (F.eks rotate (), skew () osv)
+    
+    •	Alle bildene skal i en mappe, CSS filene i en mappe osv. Se eksempel 3.
+    
+    •	Før du sender inn koden, skal de valideres i:
+    o	HTML: https://validator.w3.org/#validate_by_upload 
+    o	CSS: https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_upload
+    
