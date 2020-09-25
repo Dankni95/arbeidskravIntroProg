@@ -1,10 +1,9 @@
-@media (min-width: 1080px) {}
+@media (min-width: 1080px) {
+}
 
 * {
 	padding: 0px;
 	margin: 0px;
-
-
 }
 
 .dp_slider {
@@ -15,8 +14,6 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 1;
-	/*         background-image: (118.74134144435823deg, rgba(254, 207, 238,1) 23.279296875%,rgba(255, 156, 160,1) 95.076171875%)
- */
 }
 
 .dp_slider video {
@@ -43,31 +40,48 @@
 	position: relative;
 	margin: 0;
 	padding-bottom: 50px;
-	font-size: 6em;
+	font-size: 7em;
 	text-transform: uppercase;
 	mix-blend-mode: screen;
 	color: transparent;
-	text-shadow: wheat -3px -1px 0px; /* må legge til stroke/animation på en eller annen måte uten å bruke webkit */
-	
-	/* animation-iteration-count: infinite;
-	animation-delay: 7.9s;
-	animation-duration: 1.4s; */
+
+	-webkit-text-stroke: 1.9px red;
+}
+.dp_slider_content {
+	animation: animate 2s linear 0s forwards;
+	opacity: 0;
+}
+
+/* H1-tag og p  animation */
+
+@keyframes animate {
+	0% {
+		transform: scale(0.2);
+	}
+	50% {
+		opacity: 0.9;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+p {
+	position: relative;
+	text-shadow: -1px -1px 0 red;
+	text-transform: uppercase;
+	opacity: 0.3;
+	margin: -70px;
+	padding: 10px;
 }
 
 .dp_slider .dp_slider_content p {
 	padding-bottom: 300px;
 }
 
-/* p {
-	animation-delay: 7.7s;
-	animation-fill-mode: forwards;
-} */
+/* 		Audio controls placement and size */
 
-/* .dp_slider_title {
-	-webkit-text-stroke: 1px red  webkit ikke tillat?
-	
-} */
-audio 
+audio {
 	width: 20px;
 	height: 35px;
 	padding: 0;
@@ -84,14 +98,98 @@ audio
 	z-index: 2;
 }
 
+/* Hva er dette igjen? Audio knapp? */
+
+#volume_2,
+#value_1 {
+	animation: anime 2s linear 0s forwards;
+}
+@keyframes anime {
+	0% {
+		transform: scale(0.2);
+	}
+	50% {
+		filter: invert(0%) sepia(1%);
+		opacity: 0.9;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+/*      play button placement */
+
 .slider_play_button button {
+	position: relative;
 	width: 150px;
 	height: 40px;
 	margin: -65px;
-	border-color: brown;
-	border-radius: 1px;
+	border-color: transparent;
 	background-color: transparent;
 	align-content: center;
-	color: white;
-	text-transform: uppercase;
 }
+
+/*    Sound image in slider size */
+
+.slider_play_button img {
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+
+/* adds red color on hover for audio button */
+.slider_play_button button:hover {
+	filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+		brightness(104%) contrast(97%);
+	cursor: pointer;
+}
+
+/* takes away outline border on:hover */
+
+.slider_play_button button:focus {
+	outline: 0;
+}
+
+/* Moving main button-logo */
+
+.button_main {
+	position: absolute;
+	margin: 0px 0px 0px -677px;
+	text-align: center;
+}
+
+.slider_main_button img:hover {
+	filter: contrast(55%) brightness(90%);
+}
+
+/* main button sizing  */
+
+.slider_main_button img {
+	height: 70px;
+	width: 70px;
+	z-index: 2;
+	border: 2px dotted red;
+	border-radius: 50%;
+}
+
+.slider_main_button button {
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	border-style: hidden;
+	cursor: pointer;
+	z-index: 3;
+}
+/* 
+#volume{
+}
+#volume_1 {
+	animation: volume_1 10s ease-in 0s infinite; 
+	
+
+@keyframes volume_1 
+
+	
+
+} */
