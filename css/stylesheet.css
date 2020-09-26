@@ -14,6 +14,7 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 1;
+	
 }
 
 .dp_slider video {
@@ -38,14 +39,15 @@
 
 .dp_slider .dp_slider_content h1 {
 	position: relative;
-	margin: 0;
-	padding-bottom: 50px;
+	margin: auto;
+	padding-bottom: 10px;
 	font-size: 7em;
 	text-transform: uppercase;
 	mix-blend-mode: screen;
 	color: transparent;
 
 	-webkit-text-stroke: 1.9px red;
+	-webkit-font-smoothing: antialiased;
 }
 .dp_slider_content {
 	animation: animate 2s linear 0s forwards;
@@ -59,6 +61,7 @@
 		transform: scale(0.2);
 	}
 	50% {
+		
 		opacity: 0.9;
 	}
 	100% {
@@ -67,23 +70,22 @@
 	}
 }
 p {
-	position: relative;
 	text-shadow: -1px -1px 0 red;
 	text-transform: uppercase;
 	opacity: 0.3;
-	margin: -70px;
-	padding: 10px;
 }
 
-.dp_slider .dp_slider_content p {
+ .dp_slider_content p {
 	padding-bottom: 300px;
+	
 }
 
 /* 		Audio controls placement and size */
 
 audio {
+	
 	width: 20px;
-	height: 35px;
+	height: 30px;
 	padding: 0;
 	margin-top: 250px;
 	position: absolute;
@@ -101,16 +103,17 @@ audio {
 /* Hva er dette igjen? Audio knapp? */
 
 #volume_2,
-#value_1 {
+#vol_1{
 	animation: anime 2s linear 0s forwards;
 }
 @keyframes anime {
 	0% {
 		transform: scale(0.2);
+	
 	}
 	50% {
-		filter: invert(0%) sepia(1%);
 		opacity: 0.9;
+		
 	}
 	100% {
 		transform: scale(1);
@@ -118,7 +121,8 @@ audio {
 	}
 }
 
-/*      play button placement */
+/*      play button placement and color */
+
 
 .slider_play_button button {
 	position: relative;
@@ -128,14 +132,17 @@ audio {
 	border-color: transparent;
 	background-color: transparent;
 	align-content: center;
+	filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
 }
+
 
 /*    Sound image in slider size */
 
 .slider_play_button img {
 	position: relative;
-	width: 80px;
+	width: 80px;                              
 	height: 80px;
+	
 }
 
 /* adds red color on hover for audio button */
@@ -149,6 +156,7 @@ audio {
 
 .slider_play_button button:focus {
 	outline: 0;
+	
 }
 
 /* Moving main button-logo */
@@ -158,9 +166,15 @@ audio {
 	margin: 0px 0px 0px -677px;
 	text-align: center;
 }
+.slider_main_button:focus, .main_button:focus {
+	border: none;
+	outline-style: none;                  /*  dette funker ikke?????? */
+	outline: 0;
+	
+}
 
 .slider_main_button img:hover {
-	filter: contrast(55%) brightness(90%);
+	filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
 }
 
 /* main button sizing  */
@@ -181,15 +195,4 @@ audio {
 	cursor: pointer;
 	z-index: 3;
 }
-/* 
-#volume{
-}
-#volume_1 {
-	animation: volume_1 10s ease-in 0s infinite; 
-	
 
-@keyframes volume_1 
-
-	
-
-} */
