@@ -1,3 +1,8 @@
+/* Skriver det på engelsk :)
+		Sound only works when user pushes sound button because of chromes rules. The audio button only redirects
+		back to frontpage for chrome to register as user action. Since this is localhosted file, on some IDE'S the link 
+		for redirect may fail because of changing URLS. */
+
 @media (min-width: 1080px) {
 }
 
@@ -14,7 +19,6 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 1;
-	
 }
 
 .dp_slider video {
@@ -49,46 +53,66 @@
 	-webkit-text-stroke: 1.9px red;
 	-webkit-font-smoothing: antialiased;
 }
-.dp_slider_content {
-	animation: animate 2s linear 0s forwards;
-	opacity: 0;
+
+/* possible to animate h1 "pool" */
+
+.dp_slider_title_2 {
+	display: inline-block;
+	/* animation: animate_2 2s ease 8s backwards infinite;
+	*/
+	-webkit-font-smoothing: antialiased;
 }
 
-/* H1-tag og p  animation */
-
-@keyframes animate {
+/* }
+@keyframes animate_2 {
 	0% {
-		transform: scale(0.2);
+		transform: scale(1);
+		
 	}
 	50% {
 		
 		opacity: 0.9;
+		color: red;
 	}
 	100% {
 		transform: scale(1);
 		opacity: 1;
+		color: white;
+} */
+
+/* animation for h1 "dead" */
+
+.dp_slider_title {
+	display: inline-block;
+	animation: animate 567ms ease 8s backwards 36;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke: 8px red;
+}
+@keyframes animate {
+	0% {
+		transform: scale(1);
+		color: red;
+	}
+	50% {
+		opacity: 0.9;
+
+		text-decoration: solid;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+		color: white;
 	}
 }
+
 p {
 	text-shadow: -1px -1px 0 red;
 	text-transform: uppercase;
-	opacity: 0.3;
+	opacity: 0.2;
 }
 
- .dp_slider_content p {
+.dp_slider_content p {
 	padding-bottom: 300px;
-	
-}
-
-/* 		Audio controls placement and size */
-
-audio {
-	
-	width: 20px;
-	height: 30px;
-	padding: 0;
-	margin-top: 250px;
-	position: absolute;
 }
 
 .slider_play_button {
@@ -100,29 +124,27 @@ audio {
 	z-index: 2;
 }
 
-/* Hva er dette igjen? Audio knapp? */
+/* audio button animation */
 
 #volume_2,
-#vol_1{
-	animation: anime 2s linear 0s forwards;
+#vol_1 {
+	animation: anime 1s ease backwards 8;
 }
 @keyframes anime {
 	0% {
-		transform: scale(0.2);
-	
+		transform: scale(0.9);
 	}
 	50% {
-		opacity: 0.9;
-		
+		opacity: 1;
 	}
 	100% {
 		transform: scale(1);
-		opacity: 1;
+		opacity: 0;
+		background-color: red;
 	}
 }
 
 /*      play button placement and color */
-
 
 .slider_play_button button {
 	position: relative;
@@ -132,17 +154,16 @@ audio {
 	border-color: transparent;
 	background-color: transparent;
 	align-content: center;
-	filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
+	filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%)
+		contrast(80%);
 }
-
 
 /*    Sound image in slider size */
 
 .slider_play_button img {
 	position: relative;
-	width: 80px;                              
+	width: 80px;
 	height: 80px;
-	
 }
 
 /* adds red color on hover for audio button */
@@ -152,47 +173,62 @@ audio {
 	cursor: pointer;
 }
 
-/* takes away outline border on:hover */
+/* takes away outline border on:click */
 
 .slider_play_button button:focus {
 	outline: 0;
-	
+}
+
+/* 		Audio controls button placement and size */
+
+audio {
+	width: 20px;
+	height: 30px;
+	padding-left: 3px;
+	margin-top: 235px;
+	position: absolute;
+}
+
+/* "deadpool logo" trying to take away outline border on:click  */
+
+.slider_main_button:focus,
+.main_button:focus {
+	position: absolute;
+	border: none;
+	outline-style: none; /*  dette funker ikke?????? */
+	outline: 0;
+}
+
+/* "deadpool logo" button white color onhover */
+
+.slider_main_button img:hover {
+	filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%)
+		contrast(80%);
+}
+
+/* main "deadpool logo" button sizing  */
+
+.slider_main_button img {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	z-index: 2;
 }
 
 /* Moving main button-logo */
 
 .button_main {
 	position: absolute;
-	margin: 0px 0px 0px -677px;
 	text-align: center;
-}
-.slider_main_button:focus, .main_button:focus {
-	border: none;
-	outline-style: none;                  /*  dette funker ikke?????? */
-	outline: 0;
-	
+	position: inherit;
+	right: 53%;
 }
 
-.slider_main_button img:hover {
-	filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
-}
-
-/* main button sizing  */
-
-.slider_main_button img {
-	height: 70px;
-	width: 70px;
-	z-index: 2;
-	border: 2px dotted red;
-	border-radius: 50%;
-}
+/* main "deadpool logo" button hiding bgcolor and border */
 
 .slider_main_button button {
+	position: absolute;
 	background-color: Transparent;
-	background-repeat: no-repeat;
-	border-radius: 50%;
 	border-style: hidden;
 	cursor: pointer;
-	z-index: 3;
 }
-
